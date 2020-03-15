@@ -1,4 +1,11 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 
-ReactDom.render(<h4>Hola OAPE!!!</h4>, document.getElementById('app'))
+import Context from './Context'
+import {App} from './App'
+
+ReactDom.render(
+    <Context.Provider>
+        <App />
+    </Context.Provider>, 
+    document.getElementById('app'))
